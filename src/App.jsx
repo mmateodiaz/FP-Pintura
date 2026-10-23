@@ -52,7 +52,7 @@ function App() {
         </div>
       </section>
 
-      {/* SECCIÓN DE SERVICIOS (2x2 simétrica) */}
+      {/* SECCIÓN DE SERVICIOS */}
       <section id="servicios">
         <div className="section-header">
           <span className="section-tag">Nuestros Servicios</span>
@@ -87,7 +87,7 @@ function App() {
         </div>
       </section>
 
-      {/* SECCIÓN TRABAJOS REALIZADOS (NUEVA) */}
+      {/* SECCIÓN TRABAJOS REALIZADOS (CON LAS 4 IMÁGENES PROPIAS) */}
       <section id="trabajos" className="gallery-section">
         <div className="gallery-container" style={{ padding: '6rem 5%' }}>
           <div className="section-header">
@@ -98,32 +98,42 @@ function App() {
 
           <div className="gallery-grid">
             <div className="gallery-card">
-              <div className="gallery-image-placeholder">
-                <span>Foto de Obra / Interior</span>
+              <div className="gallery-image-container">
+                <img src="/casa.png" alt="Pintura de Casas y Obras" className="gallery-img" />
               </div>
               <div className="gallery-info">
-                <h3>Pintura Residencial y Detalles</h3>
-                <p>Renovación completa de ambientes con acabados prolijos.</p>
+                <h3>Pintura de Casas y Obras</h3>
+                <p>Terminaciones exteriores e interiores en proyectos residenciales.</p>
               </div>
             </div>
 
             <div className="gallery-card">
-              <div className="gallery-image-placeholder">
-                <span>Foto de Efectos / Microcemento</span>
+              <div className="gallery-image-container">
+                <img src="/interior.png" alt="Pintura de Interiores" className="gallery-img" />
               </div>
               <div className="gallery-info">
-                <h3>Efectos Especiales</h3>
-                <p>Aplicaciones texturizadas y microcemento de categoría.</p>
+                <h3>Renovación de Interiores</h3>
+                <p>Prolijidad absoluta y cuidado de los espacios en cada ambiente.</p>
               </div>
             </div>
 
             <div className="gallery-card">
-              <div className="gallery-image-placeholder">
-                <span>Foto de Obra Exterior / Fachada</span>
+              <div className="gallery-image-container">
+                <img src="/impermeabilizacion.png" alt="Impermeabilización" className="gallery-img" />
               </div>
               <div className="gallery-info">
-                <h3>Impermeabilización y Fachadas</h3>
-                <p>Protección y pintura exterior en altura y muros.</p>
+                <h3>Impermeabilización</h3>
+                <p>Protección y sellado profesional de techos, muros y medianeras.</p>
+              </div>
+            </div>
+
+            <div className="gallery-card">
+              <div className="gallery-image-container">
+                <img src="/limpiezatejas.png" alt="Limpieza y Mantenimiento de Tejas" className="gallery-img" />
+              </div>
+              <div className="gallery-info">
+                <h3>Limpieza y Mantenimiento de Tejas</h3>
+                <p>Recuperación de cubiertas, techos y superficies exteriores.</p>
               </div>
             </div>
           </div>

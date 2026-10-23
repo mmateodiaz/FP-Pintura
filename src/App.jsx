@@ -2,7 +2,8 @@ import React from 'react';
 import './App.css';
 
 function App() {
-  const whatsappNumber = "5493513019161"; // Teléfono oficial extraído de su perfil[cite: 7]
+  const whatsappNumber = "5493513019161"; // Teléfono oficial de FP Pintura[cite: 7]
+  const whatsappMessage = encodeURIComponent("Hola, quiero pedir un presupuesto de pintura y mantenimiento.");
 
   return (
     <div>
@@ -14,110 +15,135 @@ function App() {
         </div>
         <ul className="nav-links">
           <li><a href="#servicios">Servicios</a></li>
-          <li><a href="#galeria">Trabajos</a></li>
-          <li><a href="#contacto">Contacto</a></li>
+          <li><a href="#proceso">Cómo Trabajamos</a></li>
         </ul>
         <a 
-          href={`https://wa.me/${whatsappNumber}?text=Hola,%20estoy%20interesado%20en%20pedir%20un%20presupuesto.`}
+          href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`}
           target="_blank" 
           rel="noopener noreferrer"
-          className="btn-primary"
+          className="btn-whatsapp-nav"
         >
-          Pedir Presupuesto
+          💬 WhatsApp
         </a>
       </header>
 
       {/* SECCIÓN PRINCIPAL (HERO) */}
       <section className="hero">
-        <div className="hero-text">
+        <div className="hero-content">
           <span className="hero-badge">Pintura y Mantenimiento Profesional</span>
-          <h1>Transformamos tus espacios con <span>calidad y precisión</span>.</h1>
+          <h1>Más de <span>confianza y calidad</span> en cada obra.</h1>
           <p>
-            Especialistas en pintura para hogares, comercios y grandes obras. Contamos con un equipo capacitado para cumplir en tiempo y forma con cada proyecto[cite: 7].
+            Soluciones integrales de pintura, acabados y mantenimiento para hogares, comercios y desarrollos en Córdoba. Prolijidad y cumplimiento garantizado[cite: 7].
           </p>
           <div className="hero-buttons">
             <a 
-              href={`https://wa.me/${whatsappNumber}?text=Hola,%20quisiera%20coordinar%20un%20presupuesto.`}
+              href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`}
               target="_blank" 
               rel="noopener noreferrer"
-              className="btn-primary"
+              className="btn-hero-whatsapp"
             >
-              Cotizar por WhatsApp
+              💬 Hablemos por WhatsApp
             </a>
-            <a href="#galeria" className="btn-secondary">
-              Ver Trabajos
+            <a href="#servicios" className="btn-hero-outline">
+              Ver Servicios
             </a>
           </div>
         </div>
-
-        <div className="hero-card">
-          <h2>FP</h2>
-          <p>Pintura en Hogares y Obras[cite: 7]</p>
-        </div>
       </section>
 
-      {/* SECCIÓN SERVICIOS */}
+      {/* SECCIÓN DE SERVICIOS */}
       <section id="servicios">
-        <div className="section-title">
-          <h2>Nuestros Servicios</h2>
-          <p>Soluciones integrales de pintura y acabados para residencias, comercios y oficinas.</p>
+        <div className="section-header">
+          <span className="section-tag">Nuestros Servicios</span>
+          <h2>Soluciones completas para cada necesidad</h2>
+          <p>Ofrecemos acabados de máxima calidad y asesoramiento técnico especializado en cada etapa[cite: 7].</p>
         </div>
 
         <div className="services-grid">
           <div className="service-card">
-            <div className="service-number">01</div>
-            <h3>Pintura Residencial</h3>
-            <p>Renovación de interiores y exteriores en casas y departamentos con prolijidad absoluta y cuidado de tus espacios.</p>
+            <div className="service-icon">🏠</div>
+            <h3>Pintura en Hogares y Obras</h3>
+            <p>Renovación integral de interiores y exteriores para viviendas particulares, edificios y grandes superficies[cite: 7].</p>
           </div>
 
           <div className="service-card">
-            <div className="service-number">02</div>
+            <div className="service-icon">✨</div>
             <h3>Efectos Especiales</h3>
-            <p>Aplicación de microcemento, acabados símil mármol, texturas decorativas de categoría y diseño de ambientación[cite: 7].</p>
+            <p>Aplicación especializada de microcemento, acabados símil mármol, texturas decorativas y diseño de categoría[cite: 7].</p>
           </div>
 
           <div className="service-card">
-            <div className="service-number">03</div>
-            <h3>Obras y Mantenimiento</h3>
-            <p>Trabajos en conjunto con constructoras, pintura de fachadas e impermeabilización de techos y muros[cite: 7].</p>
+            <div className="service-icon">🎨</div>
+            <h3>Diseño y Ambientación</h3>
+            <p>Asesoramiento estético y cromático para transformar tus espacios con armonía, estilo y modernidad[cite: 7].</p>
+          </div>
+
+          <div className="service-card">
+            <div className="service-icon">🛡️</div>
+            <h3>Impermeabilización</h3>
+            <p>Protección profesional de techos, medianeras y muros contra humedad, filtraciones y agentes climáticos[cite: 7].</p>
           </div>
         </div>
       </section>
 
-      {/* SECCIÓN GALERÍA */}
-      <section id="galeria">
-        <div className="section-title">
-          <h2>Trabajos Realizados</h2>
-          <p>Calidad comprobada en obras de categoría y proyectos recientes[cite: 7, 8].</p>
-        </div>
+      {/* SECCIÓN CÓMO TRABAJAMOS (PASOS) */}
+      <section id="proceso" className="steps-section">
+        <div className="steps-container" style={{ padding: '0 5%' }}>
+          <div className="section-header" style={{ paddingTop: '4rem' }}>
+            <span className="section-tag">Proceso de Trabajo</span>
+            <h2>¿Cómo trabajamos?</h2>
+            <p>Un método organizado para garantizar resultados impecables y sin dolores de cabeza.</p>
+          </div>
 
-        <div className="gallery-grid">
-          <div className="gallery-item">Fachadas y Obras</div>
-          <div className="gallery-item">Interiores y Ambientes</div>
-          <div className="gallery-item">Locales y Oficinas[cite: 8]</div>
+          <div className="steps-grid">
+            <div className="step-card">
+              <span className="step-number">01</span>
+              <h3>Relevamos y asesoramos</h3>
+              <p>Visitamos el lugar o analizamos los detalles de tu proyecto para entender tus necesidades y ofrecerte la mejor solución técnica y estética.</p>
+            </div>
+
+            <div className="step-card">
+              <span className="step-number">02</span>
+              <h3>Presupuesto</h3>
+              <p>Te entregamos una cotización clara y detallada con los materiales, plazos de ejecución y costos transparentes, sin sorpresas.</p>
+            </div>
+
+            <div className="step-card">
+              <span className="step-number">03</span>
+              <h3>Ejecutamos la obra</h3>
+              <p>Nuestro equipo capacitado lleva adelante los trabajos con prolijidad absoluta, cuidado de tus espacios y entrega en tiempo y forma.</p>
+            </div>
+          </div>
+
+          {/* CTA FINAL DE PASOS */}
+          <div className="steps-cta">
+            <h3>¿Listo para renovar tus espacios?</h3>
+            <p>Contactanos hoy mismo y coordinemos la visita para tu presupuesto sin compromiso.</p>
+            <a 
+              href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`}
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="btn-hero-whatsapp"
+              style={{ display: 'inline-flex', margin: '0 auto' }}
+            >
+              💬 Pedir Presupuesto por WhatsApp
+            </a>
+          </div>
         </div>
       </section>
 
       {/* FOOTER */}
-      <footer id="contacto">
-        <div className="nav-brand">
-          <div className="logo-box">FP</div>
+      <footer>
+        <div className="footer-brand">
+          <div className="logo-box" style={{ width: '32px', height: '32px', fontSize: '0.9rem' }}>FP</div>
           <span>FP PINTURA Y MANTENIMIENTO[cite: 7]</span>
         </div>
         <p>© 2026 Todos los derechos reservados.</p>
-        <a 
-          href={`https://wa.me/${whatsappNumber}`}
-          target="_blank" 
-          rel="noopener noreferrer"
-          className="btn-secondary"
-        >
-          Escribinos
-        </a>
       </footer>
 
       {/* BOTÓN FLOTANTE DE WHATSAPP */}
       <a 
-        href={`https://wa.me/${whatsappNumber}?text=Hola,%20necesito%20consultar%20por%20un%20presupuesto%20de%20pintura.`}
+        href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`}
         target="_blank" 
         rel="noopener noreferrer"
         className="whatsapp-float"

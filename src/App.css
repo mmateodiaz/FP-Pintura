@@ -89,7 +89,7 @@ body {
   transform: translateY(-1px);
 }
 
-/* Hero Section con tonos pastel oscuros/suaves */
+/* Hero Section */
 .hero {
   position: relative;
   background: linear-gradient(rgba(30, 41, 59, 0.88), rgba(30, 41, 59, 0.92)), url('https://images.unsplash.com/photo-1589939705384-5185137a7f0f?q=80&w=1600&auto=format&fit=crop') center/cover no-repeat;
@@ -112,7 +112,6 @@ body {
   display: inline-block;
   background-color: rgba(148, 163, 184, 0.15);
   color: #cbd5e1;
-  padding: 0.4Linkrem 1.2rem;
   padding: 0.4rem 1.2rem;
   border-radius: 50px;
   font-size: 0.85rem;
@@ -132,7 +131,7 @@ body {
 }
 
 .hero h1 span {
-  color: #93c5fd; /* Azul pastel suave */
+  color: #93c5fd;
 }
 
 .hero p {
@@ -152,7 +151,7 @@ body {
 }
 
 .btn-hero-whatsapp {
-  background-color: #34d399; /* Verde pastel brillante pero suave */
+  background-color: #34d399;
   color: #022c22;
   padding: 0.9rem 2rem;
   border-radius: 50px;
@@ -224,10 +223,10 @@ section {
   font-size: 1.05rem;
 }
 
-/* Grid de Servicios */
+/* Grid de Servicios (Ahora de 2 columnas simétricas) */
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
 }
 
@@ -249,7 +248,7 @@ section {
 .service-icon {
   width: 50px;
   height: 50px;
-  background-color: #eff6ff; /* Azul pastel muy suave */
+  background-color: #eff6ff;
   color: #3b82f6;
   display: flex;
   align-items: center;
@@ -273,9 +272,69 @@ section {
   line-height: 1.5;
 }
 
+/* Sección Galería de Trabajos Propios */
+.gallery-section {
+  background-color: #ffffff;
+  max-width: 100%;
+  border-top: 1px solid #e2e8f0;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.gallery-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+.gallery-card {
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02);
+  transition: transform 0.3s ease;
+}
+
+.gallery-card:hover {
+  transform: translateY(-4px);
+}
+
+.gallery-image-placeholder {
+  height: 240px;
+  background-color: #e2e8f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #64748b;
+  font-weight: 600;
+  font-size: 0.95rem;
+  /* Aquí luego podrás poner etiquetas <img src="..." /> reales */
+}
+
+.gallery-info {
+  padding: 1.5rem;
+}
+
+.gallery-info h3 {
+  font-size: 1.15rem;
+  color: #1e293b;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.gallery-info p {
+  color: #64748b;
+  font-size: 0.9rem;
+}
+
 /* Sección Pasos de Trabajo */
 .steps-section {
-  background-color: #f1f5f9; /* Gris pastel muy claro y limpio */
+  background-color: #f1f5f9;
   max-width: 100%;
   border-top: 1px solid #e2e8f0;
   border-bottom: 1px solid #e2e8f0;
@@ -404,6 +463,10 @@ footer p {
     font-size: 2.5rem;
   }
   
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
   .nav-links {
     display: none;
   }

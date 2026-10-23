@@ -15,6 +15,7 @@ function App() {
         </div>
         <ul className="nav-links">
           <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#trabajos">Trabajos</a></li>
           <li><a href="#proceso">Cómo Trabajamos</a></li>
         </ul>
         <a 
@@ -51,7 +52,7 @@ function App() {
         </div>
       </section>
 
-      {/* SECCIÓN DE SERVICIOS */}
+      {/* SECCIÓN DE SERVICIOS (2x2 simétrica) */}
       <section id="servicios">
         <div className="section-header">
           <span className="section-tag">Nuestros Servicios</span>
@@ -82,6 +83,49 @@ function App() {
             <div className="service-icon">🛡️</div>
             <h3>Impermeabilización</h3>
             <p>Protección profesional de techos, medianeras y muros contra humedad, filtraciones y agentes climáticos.</p>
+          </div>
+        </div>
+      </section>
+
+      {/* SECCIÓN TRABAJOS REALIZADOS (NUEVA) */}
+      <section id="trabajos" className="gallery-section">
+        <div className="gallery-container" style={{ padding: '6rem 5%' }}>
+          <div className="section-header">
+            <span className="section-tag">Galería</span>
+            <h2>Trabajos Realizados</h2>
+            <p>Un recorrido visual por las obras y acabados que realizamos para nuestros clientes.</p>
+          </div>
+
+          <div className="gallery-grid">
+            <div className="gallery-card">
+              <div className="gallery-image-placeholder">
+                <span>Foto de Obra / Interior</span>
+              </div>
+              <div className="gallery-info">
+                <h3>Pintura Residencial y Detalles</h3>
+                <p>Renovación completa de ambientes con acabados prolijos.</p>
+              </div>
+            </div>
+
+            <div className="gallery-card">
+              <div className="gallery-image-placeholder">
+                <span>Foto de Efectos / Microcemento</span>
+              </div>
+              <div className="gallery-info">
+                <h3>Efectos Especiales</h3>
+                <p>Aplicaciones texturizadas y microcemento de categoría.</p>
+              </div>
+            </div>
+
+            <div className="gallery-card">
+              <div className="gallery-image-placeholder">
+                <span>Foto de Obra Exterior / Fachada</span>
+              </div>
+              <div className="gallery-info">
+                <h3>Impermeabilización y Fachadas</h3>
+                <p>Protección y pintura exterior en altura y muros.</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>

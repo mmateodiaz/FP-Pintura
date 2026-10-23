@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 
 function App() {
-  const whatsappNumber = "5493513019161"; // Teléfono oficial de FP Pintura[cite: 7]
+  const whatsappNumber = "5493513019161"; // Teléfono oficial de FP Pintura
   const whatsappMessage = encodeURIComponent("Hola, quiero pedir un presupuesto de pintura y mantenimiento.");
 
   return (
@@ -31,9 +31,9 @@ function App() {
       <section className="hero">
         <div className="hero-content">
           <span className="hero-badge">Pintura y Mantenimiento Profesional</span>
-          <h1>Más de <span>confianza y calidad</span> en cada obra.</h1>
+          <h1>Confianza y calidad en <span>cada obra</span>.</h1>
           <p>
-            Soluciones integrales de pintura, acabados y mantenimiento para hogares, comercios y desarrollos en Córdoba. Prolijidad y cumplimiento garantizado[cite: 7].
+            Soluciones integrales de pintura, acabados y mantenimiento para hogares, comercios y desarrollos en Córdoba. Prolijidad y cumplimiento garantizado.
           </p>
           <div className="hero-buttons">
             <a 
@@ -56,32 +56,32 @@ function App() {
         <div className="section-header">
           <span className="section-tag">Nuestros Servicios</span>
           <h2>Soluciones completas para cada necesidad</h2>
-          <p>Ofrecemos acabados de máxima calidad y asesoramiento técnico especializado en cada etapa[cite: 7].</p>
+          <p>Ofrecemos acabados de máxima calidad y asesoramiento técnico especializado en cada etapa.</p>
         </div>
 
         <div className="services-grid">
           <div className="service-card">
             <div className="service-icon">🏠</div>
             <h3>Pintura en Hogares y Obras</h3>
-            <p>Renovación integral de interiores y exteriores para viviendas particulares, edificios y grandes superficies[cite: 7].</p>
+            <p>Renovación integral de interiores y exteriores para viviendas particulares, edificios y grandes superficies.</p>
           </div>
 
           <div className="service-card">
             <div className="service-icon">✨</div>
             <h3>Efectos Especiales</h3>
-            <p>Aplicación especializada de microcemento, acabados símil mármol, texturas decorativas y diseño de categoría[cite: 7].</p>
+            <p>Aplicación especializada de microcemento, acabados símil mármol, texturas decorativas y diseño de categoría.</p>
           </div>
 
           <div className="service-card">
             <div className="service-icon">🎨</div>
             <h3>Diseño y Ambientación</h3>
-            <p>Asesoramiento estético y cromático para transformar tus espacios con armonía, estilo y modernidad[cite: 7].</p>
+            <p>Asesoramiento estético y cromático para transformar tus espacios con armonía, estilo y modernidad.</p>
           </div>
 
           <div className="service-card">
             <div className="service-icon">🛡️</div>
             <h3>Impermeabilización</h3>
-            <p>Protección profesional de techos, medianeras y muros contra humedad, filtraciones y agentes climáticos[cite: 7].</p>
+            <p>Protección profesional de techos, medianeras y muros contra humedad, filtraciones y agentes climáticos.</p>
           </div>
         </div>
       </section>
@@ -135,8 +135,8 @@ function App() {
       {/* FOOTER */}
       <footer>
         <div className="footer-brand">
-          <div className="logo-box" style={{ width: '32px', height: '32px', fontSize: '0.9rem' }}>FP</div>
-          <span>FP PINTURA Y MANTENIMIENTO[cite: 7]</span>
+          <div className="logo-box" style={{ width: '32px', height: '32px', fontSize: '0.9rem', backgroundColor: '#3b82f6' }}>FP</div>
+          <span>FP PINTURA Y MANTENIMIENTO</span>
         </div>
         <p>© 2026 Todos los derechos reservados.</p>
       </footer>

@@ -417,22 +417,19 @@ footer {
   }
 }
 
-/* Aplicamos la animación a las tarjetas de servicios, galería y pasos */
+/* --- ANIMACIONES DE APARICIÓN AL HACER SCROLL --- */
+
 .service-card, .gallery-card, .step-card {
-  animation: fadeInUp 0.8s ease-out both;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  will-change: opacity, transform;
 }
 
-/* Retrasos escalonados opcionales para que no aparezcan todas juntas al mismo tiempo */
-.services-grid .service-card:nth-child(1) { animation-delay: 0.1s; }
-.services-grid .service-card:nth-child(2) { animation-delay: 0.2s; }
-.services-grid .service-card:nth-child(3) { animation-delay: 0.3s; }
-.services-grid .service-card:nth-child(4) { animation-delay: 0.4s; }
-
-.gallery-grid .gallery-card:nth-child(1) { animation-delay: 0.1s; }
-.gallery-grid .gallery-card:nth-child(2) { animation-delay: 0.2s; }
-.gallery-grid .gallery-card:nth-child(3) { animation-delay: 0.3s; }
-.gallery-grid .gallery-card:nth-child(4) { animation-delay: 0.4s; }
-
-.steps-grid .step-card:nth-child(1) { animation-delay: 0.1s; }
-.steps-grid .step-card:nth-child(2) { animation-delay: 0.2s; }
-.steps-grid .step-card:nth-child(3) { animation-delay: 0.3s; }
+/* Clase que activa la animación cuando JavaScript detecta que la tarjeta es visible */
+.service-card.reveal-active, 
+.gallery-card.reveal-active, 
+.step-card.reveal-active {
+  opacity: 1;
+  transform: translateY(0);
+}

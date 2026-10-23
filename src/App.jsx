@@ -1,9 +1,36 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './App.css';
 
 function App() {
   const whatsappNumber = "5493513019161";
   const whatsappMessage = encodeURIComponent("Hola, quiero pedir un presupuesto de pintura y mantenimiento.");
+
+  // Efecto para activar las animaciones a medida que se hace scroll
+  useEffect(() => {
+    const observerOptions = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.15 // Se activa cuando el 15% de la tarjeta es visible en pantalla
+    };
+
+    const handleIntersect = (entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('reveal-active');
+          observer.unobserve(entry.target); // Deja de observar una vez que ya apareció
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(handleIntersect, observerOptions);
+    const cards = document.querySelectorAll('.service-card, .gallery-card, .step-card');
+    
+    cards.forEach(card => observer.observe(card));
+
+    return () => {
+      cards.forEach(card => observer.unobserve(card));
+    };
+  }, []);
 
   return (
     <div>
@@ -146,8 +173,8 @@ function App() {
 
           <div className="steps-grid">
             <div className="step-card">
-              <span className="step-number"> 01 </span>
-              <h3>Relevamos y asesoramos </h3>
+              <span className="step-number">01</span>
+              <h3>Relevamos y asesoramos</h3>
               <p>Visitamos el lugar o analizamos los detalles de tu proyecto para entender tus necesidades y ofrecerte la mejor solución técnica y estética.</p>
             </div>
 

@@ -91,10 +91,14 @@ body {
   transform: translateY(-1px);
 }
 
-/* Hero Section de ancho completo real tipo Tichellio */
+/* Hero Section de ancho completo real (de punta a punta) */
 .hero {
   position: relative;
-  width: 100%;
+  width: 100vw;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
   background: linear-gradient(rgba(27, 42, 74, 0.92), rgba(15, 23, 42, 0.95)), url('https://images.unsplash.com/photo-1589939705384-5185137a7f0f?q=80&w=1600&auto=format&fit=crop') center/cover no-repeat;
   color: #f1f5f9;
   padding: 12rem 5% 8rem 5%;
@@ -104,7 +108,7 @@ body {
   align-items: center;
   justify-content: center;
   min-height: 85vh;
-  margin-top: 73px; /* Para que empiece justo debajo de la barra de navegación fija */
+  margin-top: 0;
 }
 
 .hero-content {

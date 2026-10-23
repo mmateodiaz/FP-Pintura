@@ -146,8 +146,8 @@ function App() {
 
           <div className="steps-grid">
             <div className="step-card">
-              <span className="step-number">01</span>
-              <h3>Relevamos y asesoramos</h3>
+              <span className="step-number"> 01 </span>
+              <h3>Relevamos y asesoramos </h3>
               <p>Visitamos el lugar o analizamos los detalles de tu proyecto para entender tus necesidades y ofrecerte la mejor solución técnica y estética.</p>
             </div>
 

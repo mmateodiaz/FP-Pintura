@@ -1,4 +1,3 @@
-/* Reset y Estilos Generales - Gama de colores del logo oficial */
 * {
   margin: 0;
   padding: 0;
@@ -12,7 +11,6 @@ body {
   line-height: 1.6;
 }
 
-/* Navbar */
 .navbar {
   position: fixed;
   top: 0;
@@ -35,22 +33,18 @@ body {
   font-weight: 800;
   font-size: 1.25rem;
   color: #1e293b;
-  letter-spacing: -0.5px;
 }
 
-/* Logo minimalista con los colores del logo original */
 .logo-box {
   width: 42px;
   height: 42px;
-  background-color: #1b2a4a; /* Azul marino corporativo del logo */
+  background-color: #1b2a4a;
   color: #ffffff;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 8px;
   font-weight: bold;
-  font-size: 1.1rem;
-  letter-spacing: 1px;
 }
 
 .nav-links {
@@ -63,8 +57,6 @@ body {
   color: #64748b;
   text-decoration: none;
   font-weight: 500;
-  font-size: 0.95rem;
-  transition: color 0.2s;
 }
 
 .nav-links a:hover {
@@ -78,25 +70,16 @@ body {
   border-radius: 50px;
   text-decoration: none;
   font-weight: 600;
-  font-size: 0.9rem;
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  transition: background-color 0.2s, transform 0.1s;
-  box-shadow: 0 4px 12px rgba(52, 211, 153, 0.3);
 }
 
-.btn-whatsapp-nav:hover {
-  background-color: #6ee7b7;
-  transform: translateY(-1px);
-}
-
-/* Hero Section de ancho completo real */
 .hero {
-  width: 100%;
+  position: relative;
   background: linear-gradient(rgba(27, 42, 74, 0.92), rgba(15, 23, 42, 0.95)), url('https://images.unsplash.com/photo-1589939705384-5185137a7f0f?q=80&w=1600&auto=format&fit=crop') center/cover no-repeat;
   color: #f1f5f9;
-  padding: 10rem 5% 8rem 5%;
+  padding: 12rem 10% 8rem 10%;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -121,7 +104,6 @@ body {
   margin-bottom: 1.5rem;
   border: 1px solid rgba(148, 163, 184, 0.3);
   text-transform: uppercase;
-  letter-spacing: 1px;
 }
 
 .hero h1 {
@@ -129,20 +111,16 @@ body {
   font-weight: 800;
   line-height: 1.15;
   margin-bottom: 1.5rem;
-  letter-spacing: -1px;
 }
 
 .hero h1 span {
-  color: #93c5fd; /* Azul pastel suave */
+  color: #93c5fd;
 }
 
 .hero p {
   color: #cbd5e1;
   font-size: 1.15rem;
   margin-bottom: 2.5rem;
-  max-width: 750px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .hero-buttons {
@@ -159,17 +137,9 @@ body {
   border-radius: 50px;
   text-decoration: none;
   font-weight: 700;
-  font-size: 1rem;
   display: flex;
   align-items: center;
   gap: 0.75rem;
-  box-shadow: 0 10px 20px rgba(52, 211, 153, 0.2);
-  transition: background-color 0.2s, transform 0.2s;
-}
-
-.btn-hero-whatsapp:hover {
-  background-color: #6ee7b7;
-  transform: translateY(-2px);
 }
 
 .btn-hero-outline {
@@ -179,17 +149,9 @@ body {
   border-radius: 50px;
   text-decoration: none;
   font-weight: 600;
-  font-size: 1rem;
   border: 2px solid rgba(241, 245, 249, 0.3);
-  transition: background-color 0.2s, border-color 0.2s;
 }
 
-.btn-hero-outline:hover {
-  background-color: rgba(241, 245, 249, 0.1);
-  border-color: #f1f5f9;
-}
-
-/* Secciones Generales */
 section {
   padding: 6rem 5%;
   max-width: 1200px;
@@ -216,16 +178,13 @@ section {
   font-size: 2.5rem;
   font-weight: 800;
   color: #1e293b;
-  letter-spacing: -0.5px;
   margin-bottom: 1rem;
 }
 
 .section-header p {
   color: #64748b;
-  font-size: 1.05rem;
 }
 
-/* Grid de Servicios (2x2) */
 .services-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -237,14 +196,7 @@ section {
   border: 1px solid #e2e8f0;
   padding: 2.5rem 2rem;
   border-radius: 16px;
-  transition: all 0.3s ease;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02);
-}
-
-.service-card:hover {
-  border-color: #1b2a4a;
-  transform: translateY(-5px);
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05);
 }
 
 .service-icon {
@@ -265,16 +217,12 @@ section {
   font-size: 1.25rem;
   color: #1e293b;
   margin-bottom: 0.75rem;
-  font-weight: 700;
 }
 
 .service-card p {
   color: #64748b;
-  font-size: 0.95rem;
-  line-height: 1.5;
 }
 
-/* Sección Galería */
 .gallery-section {
   background-color: #ffffff;
   max-width: 100%;
@@ -282,15 +230,12 @@ section {
   border-bottom: 1px solid #e2e8f0;
 }
 
-.gallery-container {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .gallery-card {
@@ -298,12 +243,6 @@ section {
   border: 1px solid #e2e8f0;
   border-radius: 16px;
   overflow: hidden;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02);
-  transition: transform 0.3s ease;
-}
-
-.gallery-card:hover {
-  transform: translateY(-4px);
 }
 
 .gallery-image-container {
@@ -317,11 +256,6 @@ section {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.3s ease;
-}
-
-.gallery-card:hover .gallery-img {
-  transform: scale(1.05);
 }
 
 .gallery-info {
@@ -332,7 +266,6 @@ section {
   font-size: 1.15rem;
   color: #1e293b;
   margin-bottom: 0.5rem;
-  font-weight: 700;
 }
 
 .gallery-info p {
@@ -340,7 +273,6 @@ section {
   font-size: 0.9rem;
 }
 
-/* Sección Pasos de Trabajo */
 .steps-section {
   background-color: #f1f5f9;
   max-width: 100%;
@@ -348,16 +280,14 @@ section {
   border-bottom: 1px solid #e2e8f0;
 }
 
-.steps-container {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
 .steps-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2.5rem;
   margin-bottom: 4rem;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .step-card {
@@ -366,7 +296,6 @@ section {
   padding: 2.5rem;
   border-radius: 16px;
   position: relative;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02);
 }
 
 .step-number {
@@ -376,29 +305,26 @@ section {
   position: absolute;
   top: 1.5rem;
   right: 1.5rem;
-  line-height: 1;
 }
 
 .step-card h3 {
   font-size: 1.35rem;
   color: #1e293b;
   margin-bottom: 1rem;
-  font-weight: 700;
 }
 
 .step-card p {
   color: #64748b;
-  font-size: 0.95rem;
 }
 
-/* CTA Box */
 .steps-cta {
   text-align: center;
   background: linear-gradient(135deg, #1b2a4a, #2c3e6b);
   color: white;
   padding: 3.5rem 2rem;
   border-radius: 20px;
-  box-shadow: 0 20px 25px -5px rgba(27, 42, 74, 0.2);
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .steps-cta h3 {
@@ -409,14 +335,9 @@ section {
 
 .steps-cta p {
   color: #94a3b8;
-  font-size: 1.05rem;
   margin-bottom: 2rem;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
-/* Footer */
 footer {
   background-color: #1b2a4a;
   color: white;
@@ -424,7 +345,6 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 100%;
 }
 
 .footer-brand {
@@ -432,15 +352,8 @@ footer {
   align-items: center;
   gap: 0.75rem;
   font-weight: 700;
-  font-size: 1.15rem;
 }
 
-footer p {
-  color: #94a3b8;
-  font-size: 0.9rem;
-}
-
-/* Botón flotante de WhatsApp */
 .whatsapp-float {
   position: fixed;
   bottom: 25px;
@@ -456,29 +369,16 @@ footer p {
   font-size: 1.75rem;
   box-shadow: 0 10px 25px rgba(52, 211, 153, 0.3);
   text-decoration: none;
-  transition: transform 0.2s, background-color 0.2s;
   z-index: 1000;
 }
 
-.whatsapp-float:hover {
-  background-color: #6ee7b7;
-  transform: scale(1.05);
-}
-
-/* Responsivo */
 @media (max-width: 768px) {
-  .hero h1 {
-    font-size: 2.5rem;
-  }
-  
   .services-grid {
     grid-template-columns: 1fr;
   }
-
   .nav-links {
     display: none;
   }
-
   footer {
     flex-direction: column;
     gap: 1.5rem;

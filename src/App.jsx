@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 
 function App() {
-  const whatsappNumber = "5493513019161"; // Teléfono oficial de FP Pintura
+  const whatsappNumber = "5493513019161";
   const whatsappMessage = encodeURIComponent("Hola, quiero pedir un presupuesto de pintura y mantenimiento.");
 
   return (
@@ -28,7 +28,7 @@ function App() {
         </a>
       </header>
 
-      {/* SECCIÓN PRINCIPAL (HERO) */}
+      {/* SECCIÓN PRINCIPAL (HERO) - OCUPA TODO EL ANCHO DE PUNTA A PUNTA */}
       <section className="hero">
         <div className="hero-content">
           <span className="hero-badge">Pintura y Mantenimiento Profesional</span>
@@ -52,44 +52,45 @@ function App() {
         </div>
       </section>
 
-      {/* SECCIÓN DE SERVICIOS */}
-      <section id="servicios">
-        <div className="section-header">
-          <span className="section-tag">Nuestros Servicios</span>
-          <h2>Soluciones completas para cada necesidad</h2>
-          <p>Ofrecemos acabados de máxima calidad y asesoramiento técnico especializado en cada etapa.</p>
-        </div>
-
-        <div className="services-grid">
-          <div className="service-card">
-            <div className="service-icon">🏠</div>
-            <h3>Pintura en Hogares y Obras</h3>
-            <p>Renovación integral de interiores y exteriores para viviendas particulares, edificios y grandes superficies.</p>
+      {/* RESTO DE LAS SECCIONES */}
+      <div className="main-container" style={{ maxWidth: '1200px', margin: '0 auto' }}>
+        {/* SECCIÓN DE SERVICIOS */}
+        <section id="servicios">
+          <div className="section-header">
+            <span className="section-tag">Nuestros Servicios</span>
+            <h2>Soluciones completas para cada necesidad</h2>
+            <p>Ofrecemos acabados de máxima calidad y asesoramiento técnico especializado en cada etapa.</p>
           </div>
 
-          <div className="service-card">
-            <div className="service-icon">✨</div>
-            <h3>Efectos Especiales</h3>
-            <p>Aplicación especializada de microcemento, acabados símil mármol, texturas decorativas y diseño de categoría.</p>
-          </div>
+          <div className="services-grid">
+            <div className="service-card">
+              <div className="service-icon">🏠</div>
+              <h3>Pintura en Hogares y Obras</h3>
+              <p>Renovación integral de interiores y exteriores para viviendas particulares, edificios y grandes superficies.</p>
+            </div>
 
-          <div className="service-card">
-            <div className="service-icon">🎨</div>
-            <h3>Diseño y Ambientación</h3>
-            <p>Asesoramiento estético y cromático para transformar tus espacios con armonía, estilo y modernidad.</p>
-          </div>
+            <div className="service-card">
+              <div className="service-icon">✨</div>
+              <h3>Efectos Especiales</h3>
+              <p>Aplicación especializada de microcemento, acabados símil mármol, texturas decorativas y diseño de categoría.</p>
+            </div>
 
-          <div className="service-card">
-            <div className="service-icon">🛡️</div>
-            <h3>Impermeabilización</h3>
-            <p>Protección profesional de techos, medianeras y muros contra humedad, filtraciones y agentes climáticos.</p>
-          </div>
-        </div>
-      </section>
+            <div className="service-card">
+              <div className="service-icon">🎨</div>
+              <h3>Diseño y Ambientación</h3>
+              <p>Asesoramiento estético y cromático para transformar tus espacios con armonía, estilo y modernidad.</p>
+            </div>
 
-      {/* SECCIÓN TRABAJOS REALIZADOS */}
-      <section id="trabajos" className="gallery-section">
-        <div className="gallery-container" style={{ padding: '6rem 5%' }}>
+            <div className="service-card">
+              <div className="service-icon">🛡️</div>
+              <h3>Impermeabilización</h3>
+              <p>Protección profesional de techos, medianeras y muros contra humedad, filtraciones y agentes climáticos.</p>
+            </div>
+          </div>
+        </section>
+
+        {/* SECCIÓN TRABAJOS REALIZADOS */}
+        <section id="trabajos" className="gallery-section">
           <div className="section-header">
             <span className="section-tag">Galería</span>
             <h2>Trabajos Realizados</h2>
@@ -137,13 +138,11 @@ function App() {
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* SECCIÓN CÓMO TRABAJAMOS (PASOS) */}
-      <section id="proceso" className="steps-section">
-        <div className="steps-container" style={{ padding: '0 5%' }}>
-          <div className="section-header" style={{ paddingTop: '4rem' }}>
+        {/* SECCIÓN CÓMO TRABAJAMOS (PASOS) */}
+        <section id="proceso" className="steps-section">
+          <div className="section-header" style={{ paddingTop: '2rem' }}>
             <span className="section-tag">Proceso de Trabajo</span>
             <h2>¿Cómo trabajamos?</h2>
             <p>Un método organizado para garantizar resultados impecables y sin dolores de cabeza.</p>
@@ -183,14 +182,14 @@ function App() {
               💬 Pedir Presupuesto por WhatsApp
             </a>
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
 
       {/* FOOTER */}
       <footer>
         <div className="footer-brand">
           <div className="logo-box" style={{ width: '32px', height: '32px', fontSize: '0.9rem' }}>FP</div>
-          <span>FP PINTURA Y MANTENIMIENTO</span>
+          <span>FP PINTURA Y Mantenimiento</span>
         </div>
         <p>© 2026 Todos los derechos reservados.</p>
       </footer>

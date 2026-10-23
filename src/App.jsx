@@ -10,8 +10,9 @@ function App() {
       {/* BARRA DE NAVEGACIÓN */}
       <header className="navbar">
         <div className="nav-brand">
-          <div className="logo-box">FP</div>
-          <span>FP PINTURA</span>
+          <a href="#" style={{ display: 'flex', alignItems: 'center', textDecoration: 'none' }}>
+            <img src="/logoentero.png" alt="FP Pintura y Mantenimiento" className="nav-logo-img" />
+          </a>
         </div>
         <ul className="nav-links">
           <li><a href="#servicios">Servicios</a></li>
@@ -87,7 +88,7 @@ function App() {
         </div>
       </section>
 
-      {/* SECCIÓN TRABAJOS REALIZADOS (CON LAS 4 IMÁGENES PROPIAS) */}
+      {/* SECCIÓN TRABAJOS REALIZADOS */}
       <section id="trabajos" className="gallery-section">
         <div className="gallery-container" style={{ padding: '6rem 5%' }}>
           <div className="section-header">
@@ -189,8 +190,7 @@ function App() {
       {/* FOOTER */}
       <footer>
         <div className="footer-brand">
-          <div className="logo-box" style={{ width: '32px', height: '32px', fontSize: '0.9rem', backgroundColor: '#3b82f6' }}>FP</div>
-          <span>FP PINTURA Y MANTENIMIENTO</span>
+          <img src="/logoentero.png" alt="FP Pintura" className="footer-logo-img" />
         </div>
         <p>© 2026 Todos los derechos reservados.</p>
       </footer>

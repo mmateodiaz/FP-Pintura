@@ -621,3 +621,122 @@ footer {
     text-align: center;
   }
 }
+
+/* --- ESTILOS PROFESIONALES DEL FOOTER --- */
+footer.footer {
+  background-color: #1b2a4a;
+  color: #ffffff;
+  padding: 5rem 4% 2rem 4%;
+  width: 100%;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1.2fr;
+  gap: 3rem;
+  padding-bottom: 3rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.footer-col h3 {
+  font-size: 1.2rem;
+  font-weight: 750;
+  margin-bottom: 1.25rem;
+  color: #ffffff;
+  letter-spacing: 0.5px;
+}
+
+.footer-brand-box {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-weight: 800;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.footer-desc {
+  color: #cbd5e1;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  max-width: 350px;
+}
+
+/* Iconos de Redes Sociales (WhatsApp e Instagram) */
+.footer-socials {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.social-icon-btn {
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  text-decoration: none;
+  transition: transform 0.2s, background-color 0.2s;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.social-icon-btn.whatsapp {
+  background-color: #18b85b;
+  color: #ffffff;
+}
+
+.social-icon-btn.instagram {
+  background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+  color: #ffffff;
+}
+
+.social-icon-btn:hover {
+  transform: translateY(-2px);
+}
+
+/* Lista de enlaces del footer */
+.footer-links-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.footer-links-list a {
+  color: #cbd5e1;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.2s;
+}
+
+.footer-links-list a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.footer-col p {
+  color: #cbd5e1;
+  font-size: 0.95rem;
+  margin-bottom: 0.75rem;
+  line-height: 1.5;
+}
+
+.footer-bottom {
+  max-width: 1300px;
+  margin: 2rem auto 0 auto;
+  text-align: center;
+  color: #94a3b8;
+  font-size: 0.88rem;
+}
+
+@media (max-width: 900px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+}

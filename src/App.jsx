@@ -311,14 +311,60 @@ function App() {
         </div>
       </section>
 
-      <footer>
-        <div className="footer-brand">
-          <div className="logo-box" style={{ width: '32px', height: '32px', fontSize: '0.9rem' }}>FP</div>
-          <span>FP PINTURA Y MANTENIMIENTO</span>
-        </div>
-        <p>© 2026 Todos los derechos reservados.</p>
-      </footer>
+      <footer className="footer">
+        <div className="footer-container">
+          <div className="footer-col">
+            <div className="footer-brand-box">
+              <div className="logo-box" style={{ width: '38px', height: '38px', fontSize: '0.95rem' }}>FP</div>
+              <span>FP PINTURA Y MANTENIMIENTO</span>
+            </div>
+            <p className="footer-desc">
+              Soluciones integrales de pintura y acabados profesionales en Córdoba Capital y zonas cercanas.
+            </p>
+            <div className="footer-socials">
+              <a 
+                href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent("Hola, quiero hacer una consulta.")}`}
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="social-icon-btn whatsapp"
+                title="WhatsApp"
+              >
+                💬
+              </a>
+              <a 
+                href="https://www.instagram.com/fp_pintura?utm_source=ig_web_button_share_sheet&exln=ZDNlZDc0MzIxNw=="
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="social-icon-btn instagram"
+                title="Instagram"
+              >
+                📷
+              </a>
+            </div>
+          </div>
 
+          <div className="footer-col">
+            <h3>Menú</h3>
+            <ul className="footer-links-list">
+              <li><a href="#servicios">Servicios</a></li>
+              <li><a href="#trabajos">Trabajos</a></li>
+              <li><a href="#proceso">Cómo Trabajamos</a></li>
+              <li><a href="#contacto">Contacto</a></li>
+            </ul>
+          </div>
+
+          <div className="footer-col">
+            <h3>Contacto</h3>
+            <p>📞 +54 9 351 3019161</p>
+            <p>📍 Córdoba Capital y Alrededores</p>
+            <p>🕒 Lun a Vie: 9:00 a 17:30 Hs</p>
+          </div>
+        </div>
+
+        <div className="footer-bottom">
+          <p>© 2026 FP Pintura y Mantenimiento. Todos los derechos reservados.</p>
+        </div>
+      </footer>
       <a 
         href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent("Hola, quiero hacer una consulta.")}`}
         target="_blank" 

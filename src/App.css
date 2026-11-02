@@ -721,3 +721,113 @@ footer.footer {
     gap: 2.5rem;
   }
 }
+
+/* --- ESTILOS FINALES DEL FOOTER CENTRADO --- */
+footer.footer {
+  background-color: #1b2a4a;
+  color: #ffffff;
+  padding: 4rem 4% 2rem 4%;
+  width: 100%;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  gap: 4rem;
+  padding-bottom: 2.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  text-align: left;
+}
+
+.footer-col {
+  flex: 1;
+  max-width: 450px;
+}
+
+.footer-col h3 {
+  font-size: 1.2rem;
+  font-weight: 750;
+  margin-bottom: 1.25rem;
+  color: #ffffff;
+}
+
+.footer-brand-box {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-weight: 800;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.footer-desc {
+  color: #cbd5e1;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+/* Contenedor de los logos oficiales de redes */
+.footer-socials {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.social-logo-btn {
+  display: inline-block;
+  width: 42px;
+  height: 42px;
+  transition: transform 0.2s ease;
+}
+
+.social-logo-btn:hover {
+  transform: scale(1.1);
+}
+
+.social-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 50%;
+}
+
+.footer-col p {
+  color: #cbd5e1;
+  font-size: 0.95rem;
+  margin-bottom: 0.75rem;
+  line-height: 1.5;
+}
+
+.footer-bottom {
+  max-width: 1100px;
+  margin: 2rem auto 0 auto;
+  text-align: center;
+  color: #94a3b8;
+  font-size: 0.88rem;
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 2.5rem;
+  }
+
+  .footer-col {
+    max-width: 100%;
+  }
+
+  .footer-brand-box {
+    justify-content: center;
+  }
+
+  .footer-socials {
+    justify-content: center;
+  }
+}

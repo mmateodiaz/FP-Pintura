@@ -313,7 +313,7 @@ function App() {
 
       <footer className="footer">
         <div className="footer-container">
-          <div className="footer-col">
+          <div className="footer-col brand-col">
             <div className="footer-brand-box">
               <div className="logo-box" style={{ width: '38px', height: '38px', fontSize: '0.95rem' }}>FP</div>
               <span>FP PINTURA Y MANTENIMIENTO</span>
@@ -326,24 +326,24 @@ function App() {
                 href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent("Hola, quiero hacer una consulta.")}`}
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="social-icon-btn whatsapp"
+                className="social-logo-btn"
                 title="WhatsApp"
               >
-                💬
+                <img src="/whatsapp-logo.png" alt="WhatsApp" className="social-img" />
               </a>
               <a 
                 href="https://www.instagram.com/fp_pintura?utm_source=ig_web_button_share_sheet&exln=ZDNlZDc0MzIxNw=="
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="social-icon-btn instagram"
+                className="social-logo-btn"
                 title="Instagram"
               >
-                📷
+                <img src="/instagram-logo.png" alt="Instagram" className="social-img" />
               </a>
             </div>
           </div>
 
-          <div className="footer-col">
+          <div className="footer-col info-col">
             <h3>Contacto Directo</h3>
             <p>📞 +54 9 351 3019161</p>
             <p>📍 Córdoba Capital y Alrededores</p>

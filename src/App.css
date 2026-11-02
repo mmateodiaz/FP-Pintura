@@ -567,3 +567,57 @@ footer {
     grid-template-columns: 1fr;
   }
 }
+
+/* --- MEDIA QUERIES PARA CELULARES Y PANTALLAS CHICAS --- */
+
+@media (max-width: 980px) {
+  .contact-container {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Hacemos que todas las grillas pasen a 1 sola columna en celulares */
+  .services-grid {
+    grid-template-columns: 1fr;
+    padding: 0 1rem;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr;
+    padding: 0 1rem;
+  }
+
+  .steps-grid {
+    grid-template-columns: 1fr;
+    padding: 0 1rem;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr; /* Los selects del formulario bajan ordenados uno abajo del otro */
+  }
+
+  /* Ocultamos los links de navegación del header y dejamos el botón de WhatsApp */
+  .nav-links {
+    display: none;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem; /* Achicamos un poco el título principal para que no rompa la pantalla */
+  }
+
+  .hero {
+    padding: 10rem 1.5rem 6rem 1.5rem;
+  }
+
+  section {
+    padding: 4rem 1.5rem;
+  }
+
+  footer {
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: center;
+  }
+}

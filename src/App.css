@@ -1,32 +1,32 @@
-/* Reset global para eliminar márgenes por defecto del navegador */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-  background-color: #f8fafc;
-  color: #1e293b;
-  line-height: 1.6;
-  width: 100%;
+html, body {
+  width: 100vw;
+  margin: 0;
+  padding: 0;
   overflow-x: hidden;
+  background-color: #f8fafc;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  color: #1e293b;
 }
 
-/* 1. Barra de navegación: Ocupa el 100% de la pantalla sin bordes laterales */
+/* Navbar de extremo a extremo */
 .navbar {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 100vw;
   background-color: rgba(255, 255, 255, 0.98);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid #e2e8f0;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 5%;
+  padding: 1rem 3%;
   z-index: 1000;
 }
 
@@ -36,12 +36,11 @@ body {
   gap: 0.75rem;
   font-weight: 800;
   font-size: 1.25rem;
-  color: #1e293b;
 }
 
 .logo-box {
-  width: 42px;
-  height: 42px;
+  width: 40px;
+  height: 40px;
   background-color: #1b2a4a;
   color: #ffffff;
   display: flex;
@@ -53,7 +52,7 @@ body {
 
 .nav-links {
   display: flex;
-  gap: 2.5rem;
+  gap: 2rem;
   list-style: none;
 }
 
@@ -63,41 +62,33 @@ body {
   font-weight: 500;
 }
 
-.nav-links a:hover {
-  color: #1b2a4a;
-}
-
 .btn-whatsapp-nav {
   background-color: #34d399;
   color: #022c22;
-  padding: 0.6rem 1.25rem;
+  padding: 0.5rem 1.2rem;
   border-radius: 50px;
   text-decoration: none;
   font-weight: 600;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
 }
 
-/* 2. Banner Principal (Hero): De punta a punta sin restricciones */
+/* Hero de ancho absoluto */
 .hero {
-  position: relative;
-  width: 100%;
+  width: 100vw;
   background: linear-gradient(rgba(27, 42, 74, 0.92), rgba(15, 23, 42, 0.95)), url('https://images.unsplash.com/photo-1589939705384-5185137a7f0f?q=80&w=1600&auto=format&fit=crop') center/cover no-repeat;
   color: #f1f5f9;
-  padding: 13rem 5% 9rem 5%;
+  padding: 12rem 5% 8rem 5%;
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   min-height: 85vh;
-  margin-top: 73px;
+  margin-top: 70px;
 }
 
 .hero-content {
-  max-width: 1000px;
-  margin: 0 auto;
+  width: 100%;
+  max-width: 900px;
 }
 
 .hero-badge {
@@ -144,9 +135,6 @@ body {
   border-radius: 50px;
   text-decoration: none;
   font-weight: 700;
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
 }
 
 .btn-hero-outline {
@@ -159,16 +147,15 @@ body {
   border: 2px solid rgba(241, 245, 249, 0.3);
 }
 
-/* 3. Secciones generales amplias que ocupan todo el ancho disponible */
+/* Secciones generales de ancho completo sin cajas limitantes */
 section {
-  padding: 6rem 5%;
-  width: 100%;
+  width: 100vw;
+  padding: 6rem 3%;
 }
 
 .section-header {
   text-align: center;
   width: 100%;
-  padding: 0 5%;
   margin-bottom: 4rem;
 }
 
@@ -191,23 +178,22 @@ section {
 
 .section-header p {
   color: #64748b;
-  font-size: 1.1rem;
 }
 
-/* Grilla de Servicios amplia y fluida */
+/* Grillas distribuidas a lo ancho */
 .services-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 2.5rem;
+  gap: 2rem;
   width: 100%;
+  padding: 0 2%;
 }
 
 .service-card {
   background-color: #ffffff;
   border: 1px solid #e2e8f0;
-  padding: 3rem 2.5rem;
+  padding: 2.5rem;
   border-radius: 16px;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02);
 }
 
 .service-icon {
@@ -225,30 +211,30 @@ section {
 }
 
 .service-card h3 {
-  font-size: 1.35rem;
+  font-size: 1.25rem;
   color: #1e293b;
   margin-bottom: 0.75rem;
 }
 
 .service-card p {
   color: #64748b;
-  font-size: 1rem;
 }
 
-/* Sección de Trabajos Realizados (Galería) de ancho completo */
+/* Galería de ancho total */
 .gallery-section {
   background-color: #ffffff;
-  width: 100%;
+  width: 100vw;
   border-top: 1px solid #e2e8f0;
   border-bottom: 1px solid #e2e8f0;
-  padding: 6rem 5%;
+  padding: 6rem 3%;
 }
 
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 2rem;
+  gap: 1.5rem;
   width: 100%;
+  padding: 0 1%;
 }
 
 .gallery-card {
@@ -259,9 +245,8 @@ section {
 }
 
 .gallery-image-container {
-  height: 260px;
+  height: 220px;
   width: 100%;
-  overflow: hidden;
   background-color: #e2e8f0;
 }
 
@@ -276,40 +261,40 @@ section {
 }
 
 .gallery-info h3 {
-  font-size: 1.15rem;
+  font-size: 1.1rem;
   color: #1e293b;
   margin-bottom: 0.5rem;
 }
 
 .gallery-info p {
   color: #64748b;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
 }
 
-/* Sección Pasos de Trabajo (3 columnas distribuidas a lo ancho) */
+/* Pasos de trabajo amplios */
 .steps-section {
   background-color: #f1f5f9;
-  width: 100%;
+  width: 100vw;
   border-top: 1px solid #e2e8f0;
   border-bottom: 1px solid #e2e8f0;
-  padding: 6rem 5%;
+  padding: 6rem 3%;
 }
 
 .steps-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 2.5rem;
-  margin-bottom: 4rem;
+  gap: 2rem;
   width: 100%;
+  padding: 0 2%;
+  margin-bottom: 4rem;
 }
 
 .step-card {
   background-color: #ffffff;
   border: 1px solid #e2e8f0;
-  padding: 3rem 2.5rem;
+  padding: 2.5rem;
   border-radius: 16px;
   position: relative;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02);
 }
 
 .step-number {
@@ -327,36 +312,33 @@ section {
 }
 
 .step-card h3 {
-  font-size: 1.35rem;
+  font-size: 1.25rem;
   color: #1e293b;
   margin-bottom: 0.75rem;
-  font-weight: 700;
 }
 
 .step-card p {
   color: #64748b;
-  font-size: 1rem;
 }
 
-/* CTA de pasos ancho */
 .steps-cta {
   text-align: center;
   background: linear-gradient(135deg, #1b2a4a, #2c3e6b);
   color: white;
   padding: 4rem 3rem;
   border-radius: 20px;
-  width: 100%;
+  width: 94%;
+  margin: 0 auto;
 }
 
 .steps-cta h3 {
-  font-size: 2.25rem;
+  font-size: 2rem;
   font-weight: 800;
   margin-bottom: 1rem;
 }
 
 .steps-cta p {
   color: #94a3b8;
-  font-size: 1.1rem;
   margin-bottom: 2rem;
 }
 
@@ -364,11 +346,11 @@ section {
 footer {
   background-color: #1b2a4a;
   color: white;
-  padding: 4rem 5%;
+  padding: 3rem 5%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
+  width: 100vw;
 }
 
 .footer-brand {
@@ -378,7 +360,6 @@ footer {
   font-weight: 700;
 }
 
-/* Botón flotante de WhatsApp */
 .whatsapp-float {
   position: fixed;
   bottom: 25px;
@@ -397,7 +378,7 @@ footer {
   z-index: 1000;
 }
 
-/* Animaciones de aparición progresiva al hacer scroll */
+/* Animaciones */
 .service-card, .gallery-card, .step-card {
   opacity: 0;
   transform: translateY(40px);
@@ -411,7 +392,6 @@ footer {
   transform: translateY(0);
 }
 
-/* Adaptabilidad para pantallas más chicas */
 @media (max-width: 1200px) {
   .gallery-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -419,13 +399,7 @@ footer {
 }
 
 @media (max-width: 900px) {
-  .steps-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 768px) {
-  .services-grid, .gallery-grid {
+  .steps-grid, .services-grid, .gallery-grid {
     grid-template-columns: 1fr;
   }
   .nav-links {

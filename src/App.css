@@ -5,28 +5,27 @@
 }
 
 html, body {
-  width: 100vw;
-  margin: 0;
-  padding: 0;
+  width: 100%;
+  max-width: 100%;
   overflow-x: hidden;
   background-color: #f8fafc;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
   color: #1e293b;
 }
 
-/* Navbar de extremo a extremo */
+/* Navbar de extremo a extremo perfectamente centrada */
 .navbar {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
+  width: 100%;
   background-color: rgba(255, 255, 255, 0.98);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid #e2e8f0;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 3%;
+  padding: 1rem 5%;
   z-index: 1000;
 }
 
@@ -71,24 +70,25 @@ html, body {
   font-weight: 600;
 }
 
-/* Hero de ancho absoluto */
+/* Hero de ancho absoluto simétrico */
 .hero {
-  width: 100vw;
+  width: 100%;
   background: linear-gradient(rgba(27, 42, 74, 0.92), rgba(15, 23, 42, 0.95)), url('https://images.unsplash.com/photo-1589939705384-5185137a7f0f?q=80&w=1600&auto=format&fit=crop') center/cover no-repeat;
   color: #f1f5f9;
-  padding: 12rem 5% 8rem 5%;
+  padding: 13rem 5% 9rem 5%;
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   min-height: 85vh;
-  margin-top: 70px;
+  margin-top: 73px;
 }
 
 .hero-content {
   width: 100%;
-  max-width: 900px;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 .hero-badge {
@@ -147,16 +147,17 @@ html, body {
   border: 2px solid rgba(241, 245, 249, 0.3);
 }
 
-/* Secciones generales de ancho completo sin cajas limitantes */
+/* Secciones generales fluidas y centradas */
 section {
-  width: 100vw;
-  padding: 6rem 3%;
+  width: 100%;
+  padding: 6rem 5%;
 }
 
 .section-header {
   text-align: center;
   width: 100%;
-  margin-bottom: 4rem;
+  max-width: 800px;
+  margin: 0 auto 4rem auto;
 }
 
 .section-tag {
@@ -180,20 +181,22 @@ section {
   color: #64748b;
 }
 
-/* Grillas distribuidas a lo ancho */
+/* Grilla de servicios simétrica y centrada */
 .services-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
+  gap: 2.5rem;
   width: 100%;
-  padding: 0 2%;
+  max-width: 1300px;
+  margin: 0 auto;
 }
 
 .service-card {
   background-color: #ffffff;
   border: 1px solid #e2e8f0;
-  padding: 2.5rem;
+  padding: 3rem;
   border-radius: 16px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02);
 }
 
 .service-icon {
@@ -211,7 +214,7 @@ section {
 }
 
 .service-card h3 {
-  font-size: 1.25rem;
+  font-size: 1.35rem;
   color: #1e293b;
   margin-bottom: 0.75rem;
 }
@@ -220,21 +223,22 @@ section {
   color: #64748b;
 }
 
-/* Galería de ancho total */
+/* Galería de ancho total simétrica */
 .gallery-section {
   background-color: #ffffff;
-  width: 100vw;
+  width: 100%;
   border-top: 1px solid #e2e8f0;
   border-bottom: 1px solid #e2e8f0;
-  padding: 6rem 3%;
+  padding: 6rem 5%;
 }
 
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 1.5rem;
+  gap: 2rem;
   width: 100%;
-  padding: 0 1%;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
 .gallery-card {
@@ -245,7 +249,7 @@ section {
 }
 
 .gallery-image-container {
-  height: 220px;
+  height: 240px;
   width: 100%;
   background-color: #e2e8f0;
 }
@@ -261,40 +265,41 @@ section {
 }
 
 .gallery-info h3 {
-  font-size: 1.1rem;
+  font-size: 1.15rem;
   color: #1e293b;
   margin-bottom: 0.5rem;
 }
 
 .gallery-info p {
   color: #64748b;
-  font-size: 0.85rem;
+  font-size: 0.9rem;
 }
 
-/* Pasos de trabajo amplios */
+/* Pasos de trabajo simétricos */
 .steps-section {
   background-color: #f1f5f9;
-  width: 100vw;
+  width: 100%;
   border-top: 1px solid #e2e8f0;
   border-bottom: 1px solid #e2e8f0;
-  padding: 6rem 3%;
+  padding: 6rem 5%;
 }
 
 .steps-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
+  gap: 2.5rem;
   width: 100%;
-  padding: 0 2%;
-  margin-bottom: 4rem;
+  max-width: 1300px;
+  margin: 0 auto 4rem auto;
 }
 
 .step-card {
   background-color: #ffffff;
   border: 1px solid #e2e8f0;
-  padding: 2.5rem;
+  padding: 3rem;
   border-radius: 16px;
   position: relative;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02);
 }
 
 .step-number {
@@ -312,7 +317,7 @@ section {
 }
 
 .step-card h3 {
-  font-size: 1.25rem;
+  font-size: 1.35rem;
   color: #1e293b;
   margin-bottom: 0.75rem;
 }
@@ -327,12 +332,13 @@ section {
   color: white;
   padding: 4rem 3rem;
   border-radius: 20px;
-  width: 94%;
+  width: 100%;
+  max-width: 1300px;
   margin: 0 auto;
 }
 
 .steps-cta h3 {
-  font-size: 2rem;
+  font-size: 2.25rem;
   font-weight: 800;
   margin-bottom: 1rem;
 }
@@ -350,7 +356,7 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100vw;
+  width: 100%;
 }
 
 .footer-brand {

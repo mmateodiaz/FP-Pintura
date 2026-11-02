@@ -1,4 +1,4 @@
-/* Reset y Estilos Generales */
+/* Reset y Estilos Globales */
 * {
   margin: 0;
   padding: 0;
@@ -78,25 +78,26 @@ body {
   gap: 0.5rem;
 }
 
-/* Hero Section que ahora SÍ ocupa el 100% de la pantalla de punta a punta */
+/* HERO SECTION - Ancho completo de punta a punta */
 .hero {
   position: relative;
   width: 100%;
   background: linear-gradient(rgba(27, 42, 74, 0.92), rgba(15, 23, 42, 0.95)), url('https://images.unsplash.com/photo-1589939705384-5185137a7f0f?q=80&w=1600&auto=format&fit=crop') center/cover no-repeat;
   color: #f1f5f9;
-  padding: 13rem 5% 9rem 5%;
+  padding: 14rem 6% 10rem 6%;
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   min-height: 85vh;
-  margin-top: 73px; /* Espacio para que la navbar fija no lo tape */
+  margin-top: 73px; /* Espacio para la navbar fija */
 }
 
 .hero-content {
-  max-width: 900px;
+  max-width: 1000px;
   margin: 0 auto;
+  width: 100%;
 }
 
 .hero-badge {
@@ -127,6 +128,9 @@ body {
   color: #cbd5e1;
   font-size: 1.15rem;
   margin-bottom: 2.5rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .hero-buttons {
@@ -158,17 +162,15 @@ body {
   border: 2px solid rgba(241, 245, 249, 0.3);
 }
 
-/* Secciones generales con ancho amplio y prolijo */
+/* Secciones de contenido general con buen ancho */
 section {
-  padding: 6rem 5%;
+  padding: 6rem 6%;
   width: 100%;
-  max-width: 1400px;
-  margin: 0 auto;
 }
 
 .section-header {
   text-align: center;
-  max-width: 700px;
+  max-width: 800px;
   margin: 0 auto 4rem auto;
 }
 
@@ -191,18 +193,22 @@ section {
 
 .section-header p {
   color: #64748b;
+  font-size: 1.05rem;
 }
 
+/* Servicios Grid */
 .services-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
+  gap: 2.5rem;
+  max-width: 1300px;
+  margin: 0 auto;
 }
 
 .service-card {
   background-color: #ffffff;
   border: 1px solid #e2e8f0;
-  padding: 2.5rem 2rem;
+  padding: 3rem 2.5rem;
   border-radius: 16px;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02);
 }
@@ -222,29 +228,29 @@ section {
 }
 
 .service-card h3 {
-  font-size: 1.25rem;
+  font-size: 1.35rem;
   color: #1e293b;
   margin-bottom: 0.75rem;
 }
 
 .service-card p {
   color: #64748b;
+  font-size: 1rem;
 }
 
+/* Galería de Trabajos */
 .gallery-section {
   background-color: #ffffff;
   width: 100%;
-  max-width: 100%;
   border-top: 1px solid #e2e8f0;
   border-bottom: 1px solid #e2e8f0;
-  padding: 6rem 5%;
 }
 
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
-  max-width: 1400px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2.5rem;
+  max-width: 1300px;
   margin: 0 auto;
 }
 
@@ -256,7 +262,7 @@ section {
 }
 
 .gallery-image-container {
-  height: 240px;
+  height: 260px;
   width: 100%;
   overflow: hidden;
   background-color: #e2e8f0;
@@ -269,35 +275,34 @@ section {
 }
 
 .gallery-info {
-  padding: 1.5rem;
+  padding: 1.75rem;
 }
 
 .gallery-info h3 {
-  font-size: 1.15rem;
+  font-size: 1.2rem;
   color: #1e293b;
   margin-bottom: 0.5rem;
 }
 
 .gallery-info p {
   color: #64748b;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
 }
 
+/* Pasos de Trabajo */
 .steps-section {
   background-color: #f1f5f9;
   width: 100%;
-  max-width: 100%;
   border-top: 1px solid #e2e8f0;
   border-bottom: 1px solid #e2e8f0;
-  padding: 6rem 5%;
 }
 
 .steps-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
+  gap: 2.5rem;
   margin-bottom: 4rem;
-  max-width: 1400px;
+  max-width: 1300px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -305,7 +310,7 @@ section {
 .step-card {
   background-color: #ffffff;
   border: 1px solid #e2e8f0;
-  padding: 2.5rem 2rem;
+  padding: 3rem 2.5rem;
   border-radius: 16px;
   position: relative;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02);
@@ -326,7 +331,7 @@ section {
 }
 
 .step-card h3 {
-  font-size: 1.25rem;
+  font-size: 1.35rem;
   color: #1e293b;
   margin-bottom: 0.75rem;
   font-weight: 700;
@@ -334,34 +339,36 @@ section {
 
 .step-card p {
   color: #64748b;
-  font-size: 0.95rem;
+  font-size: 1rem;
 }
 
 .steps-cta {
   text-align: center;
   background: linear-gradient(135deg, #1b2a4a, #2c3e6b);
   color: white;
-  padding: 3.5rem 2rem;
+  padding: 4rem 3rem;
   border-radius: 20px;
-  max-width: 1400px;
+  max-width: 1300px;
   margin: 0 auto;
 }
 
 .steps-cta h3 {
-  font-size: 2rem;
+  font-size: 2.25rem;
   font-weight: 800;
   margin-bottom: 1rem;
 }
 
 .steps-cta p {
   color: #94a3b8;
+  font-size: 1.1rem;
   margin-bottom: 2rem;
 }
 
+/* Footer de ancho completo */
 footer {
   background-color: #1b2a4a;
   color: white;
-  padding: 4rem 5%;
+  padding: 4rem 6%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -373,8 +380,14 @@ footer {
   align-items: center;
   gap: 0.75rem;
   font-weight: 700;
+  font-size: 1.1rem;
 }
 
+footer p {
+  color: #94a3b8;
+}
+
+/* Botón flotante */
 .whatsapp-float {
   position: fixed;
   bottom: 25px;
@@ -393,7 +406,7 @@ footer {
   z-index: 1000;
 }
 
-/* Clases para la animación de scroll suave */
+/* Clases de animación */
 .service-card, .gallery-card, .step-card {
   opacity: 0;
   transform: translateY(40px);

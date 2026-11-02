@@ -344,17 +344,7 @@ function App() {
           </div>
 
           <div className="footer-col">
-            <h3>Menú</h3>
-            <ul className="footer-links-list">
-              <li><a href="#servicios">Servicios</a></li>
-              <li><a href="#trabajos">Trabajos</a></li>
-              <li><a href="#proceso">Cómo Trabajamos</a></li>
-              <li><a href="#contacto">Contacto</a></li>
-            </ul>
-          </div>
-
-          <div className="footer-col">
-            <h3>Contacto</h3>
+            <h3>Contacto Directo</h3>
             <p>📞 +54 9 351 3019161</p>
             <p>📍 Córdoba Capital y Alrededores</p>
             <p>🕒 Lun a Vie: 9:00 a 17:30 Hs</p>

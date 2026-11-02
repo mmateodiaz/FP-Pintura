@@ -74,12 +74,12 @@ html, body {
   font-weight: 600;
 }
 
-/* Hero Section: Fondo azul marino extendido de punta a punta */
+/* Hero Section con el mismo ancho exacto de punta a punta que la barra superior */
 .hero {
   width: 100%;
   background: linear-gradient(rgba(27, 42, 74, 0.92), rgba(15, 23, 42, 0.95)), url('https://images.unsplash.com/photo-1589939705384-5185137a7f0f?q=80&w=1600&auto=format&fit=crop') center/cover no-repeat;
   color: #f1f5f9;
-  padding: 13rem 4% 9rem 4%;
+  padding: 13rem 4% 9rem 4%; /* Mismo padding horizontal que el navbar (4%) */
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -91,7 +91,7 @@ html, body {
 
 .hero-content {
   width: 100%;
-  max-width: 1000px;
+  max-width: 1400px; /* Ampliado para que ocupe todo el ancho visual simétrico */
   margin: 0 auto;
 }
 

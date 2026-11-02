@@ -342,7 +342,7 @@ section {
   text-align: center;
   background: linear-gradient(135deg, #1b2a4a, #2c3e6b);
   color: white;
-  padding: 4rem 3rem;
+  padding: 4rem 4%; /* Alineado simétricamente con el 4% superior */
   border-radius: 20px;
   width: 100%;
   max-width: 1400px;
@@ -365,7 +365,7 @@ section {
 footer {
   background-color: #1b2a4a;
   color: white;
-  padding: 4rem 4%;
+  padding: 3rem 4%; /* Mismo padding horizontal exacto que la barra de navegación (4%) */
   display: flex;
   justify-content: space-between;
   align-items: center;

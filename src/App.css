@@ -10,9 +10,10 @@ body {
   background-color: #f8fafc;
   color: #1e293b;
   line-height: 1.6;
+  overflow-x: hidden;
 }
 
-/* Navbar */
+/* Navbar de ancho completo */
 .navbar {
   position: fixed;
   top: 0;
@@ -77,18 +78,20 @@ body {
   gap: 0.5rem;
 }
 
-/* Hero Section */
+/* Hero Section que ahora SÍ ocupa el 100% de la pantalla de punta a punta */
 .hero {
   position: relative;
+  width: 100%;
   background: linear-gradient(rgba(27, 42, 74, 0.92), rgba(15, 23, 42, 0.95)), url('https://images.unsplash.com/photo-1589939705384-5185137a7f0f?q=80&w=1600&auto=format&fit=crop') center/cover no-repeat;
   color: #f1f5f9;
-  padding: 12rem 10% 8rem 10%;
+  padding: 13rem 5% 9rem 5%;
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   min-height: 85vh;
+  margin-top: 73px; /* Espacio para que la navbar fija no lo tape */
 }
 
 .hero-content {
@@ -155,9 +158,11 @@ body {
   border: 2px solid rgba(241, 245, 249, 0.3);
 }
 
+/* Secciones generales con ancho amplio y prolijo */
 section {
   padding: 6rem 5%;
-  max-width: 1200px;
+  width: 100%;
+  max-width: 1400px;
   margin: 0 auto;
 }
 
@@ -228,16 +233,18 @@ section {
 
 .gallery-section {
   background-color: #ffffff;
+  width: 100%;
   max-width: 100%;
   border-top: 1px solid #e2e8f0;
   border-bottom: 1px solid #e2e8f0;
+  padding: 6rem 5%;
 }
 
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
 }
 
@@ -276,20 +283,21 @@ section {
   font-size: 0.9rem;
 }
 
-/* Sección Pasos de Trabajo (Corregida: 3 columnas prolijas y número arriba) */
 .steps-section {
   background-color: #f1f5f9;
+  width: 100%;
   max-width: 100%;
   border-top: 1px solid #e2e8f0;
   border-bottom: 1px solid #e2e8f0;
+  padding: 6rem 5%;
 }
 
 .steps-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 columnas exactas lado a lado */
+  grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
   margin-bottom: 4rem;
-  max-width: 1200px;
+  max-width: 1400px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -314,7 +322,7 @@ section {
   align-items: center;
   justify-content: center;
   border-radius: 12px;
-  margin-bottom: 1.5rem; /* Puesto arriba para evitar superposiciones */
+  margin-bottom: 1.5rem;
 }
 
 .step-card h3 {
@@ -335,7 +343,7 @@ section {
   color: white;
   padding: 3.5rem 2rem;
   border-radius: 20px;
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
 }
 
@@ -357,6 +365,7 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
 }
 
 .footer-brand {
@@ -384,9 +393,23 @@ footer {
   z-index: 1000;
 }
 
+/* Clases para la animación de scroll suave */
+.service-card, .gallery-card, .step-card {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.service-card.reveal-active, 
+.gallery-card.reveal-active, 
+.step-card.reveal-active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 @media (max-width: 900px) {
   .steps-grid {
-    grid-template-columns: 1fr; /* En celulares se apilan uno abajo del otro ordenados */
+    grid-template-columns: 1fr;
   }
 }
 
@@ -402,34 +425,4 @@ footer {
     gap: 1.5rem;
     text-align: center;
   }
-}
-
-/* --- ANIMACIONES DE APARICIÓN AL HACER SCROLL --- */
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* --- ANIMACIONES DE APARICIÓN AL HACER SCROLL --- */
-
-.service-card, .gallery-card, .step-card {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-  will-change: opacity, transform;
-}
-
-/* Clase que activa la animación cuando JavaScript detecta que la tarjeta es visible */
-.service-card.reveal-active, 
-.gallery-card.reveal-active, 
-.step-card.reveal-active {
-  opacity: 1;
-  transform: translateY(0);
 }

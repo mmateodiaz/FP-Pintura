@@ -13,19 +13,19 @@ body {
   overflow-x: hidden;
 }
 
-/* Navbar que ocupa todo el ancho de la pantalla */
+/* 1. Barra de navegación de ancho completo (100% de la pantalla) */
 .navbar {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
+  width: 100%;
   background-color: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid #e2e8f0;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 4%;
+  padding: 1rem 5%;
   z-index: 1000;
 }
 
@@ -78,10 +78,10 @@ body {
   gap: 0.5rem;
 }
 
-/* Hero Section que ahora SÍ abarca el 100% de la pantalla de punta a punta */
+/* 2. Banner Principal (Hero): Ocupa el 100% del ancho de punta a punta */
 .hero {
   position: relative;
-  width: 100vw;
+  width: 100%;
   background: linear-gradient(rgba(27, 42, 74, 0.92), rgba(15, 23, 42, 0.95)), url('https://images.unsplash.com/photo-1589939705384-5185137a7f0f?q=80&w=1600&auto=format&fit=crop') center/cover no-repeat;
   color: #f1f5f9;
   padding: 13rem 5% 9rem 5%;
@@ -91,11 +91,11 @@ body {
   align-items: center;
   justify-content: center;
   min-height: 85vh;
-  margin-top: 73px; /* Espacio exacto para que la navbar fija no lo tape */
+  margin-top: 73px; /* Espacio para la navbar fija */
 }
 
 .hero-content {
-  max-width: 1000px;
+  max-width: 900px;
   margin: 0 auto;
 }
 
@@ -158,10 +158,9 @@ body {
   border: 2px solid rgba(241, 245, 249, 0.3);
 }
 
-/* Secciones interiores con un ancho cómodo y centrado */
+/* 3. Secciones generales: Ordenadas, simétricas y centradas para que no queden sueltas */
 section {
   padding: 6rem 5%;
-  width: 100%;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -193,6 +192,7 @@ section {
   color: #64748b;
 }
 
+/* Grilla de Servicios simétrica */
 .services-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -231,21 +231,18 @@ section {
   color: #64748b;
 }
 
+/* Sección Galería de ancho completo pero con contenido centrado y ordenado */
 .gallery-section {
   background-color: #ffffff;
-  width: 100vw;
-  max-width: 100vw;
+  width: 100%;
   border-top: 1px solid #e2e8f0;
   border-bottom: 1px solid #e2e8f0;
-  padding: 6rem 5%;
 }
 
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
 }
 
 .gallery-card {
@@ -283,13 +280,12 @@ section {
   font-size: 0.9rem;
 }
 
+/* Sección Pasos de Trabajo ordenada */
 .steps-section {
   background-color: #f1f5f9;
-  width: 100vw;
-  max-width: 100vw;
+  width: 100%;
   border-top: 1px solid #e2e8f0;
   border-bottom: 1px solid #e2e8f0;
-  padding: 6rem 5%;
 }
 
 .steps-grid {
@@ -297,9 +293,6 @@ section {
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
   margin-bottom: 4rem;
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .step-card {
@@ -343,8 +336,6 @@ section {
   color: white;
   padding: 3.5rem 2rem;
   border-radius: 20px;
-  max-width: 1200px;
-  margin: 0 auto;
 }
 
 .steps-cta h3 {
@@ -358,6 +349,7 @@ section {
   margin-bottom: 2rem;
 }
 
+/* Footer simétrico */
 footer {
   background-color: #1b2a4a;
   color: white;
@@ -365,7 +357,7 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100vw;
+  width: 100%;
 }
 
 .footer-brand {
@@ -375,6 +367,7 @@ footer {
   font-weight: 700;
 }
 
+/* Botón flotante */
 .whatsapp-float {
   position: fixed;
   bottom: 25px;
@@ -393,7 +386,7 @@ footer {
   z-index: 1000;
 }
 
-/* Clases de animación fluidas */
+/* Animaciones fluidas al hacer scroll */
 .service-card, .gallery-card, .step-card {
   opacity: 0;
   transform: translateY(40px);

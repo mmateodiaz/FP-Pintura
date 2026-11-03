@@ -225,7 +225,6 @@ function App() {
             <p>Completá tus datos y coordinamos por WhatsApp. Respuesta rápida y sin compromiso.</p>
             
             <div className="contact-details-box">
-              <p>📞 +54 9 351 3019161</p>
               <p>📍 Córdoba Capital y Localidades Cercanas</p>
               <p>🕒 Lunes a Viernes de 9:00 a 17:30 Hs</p>
             </div>

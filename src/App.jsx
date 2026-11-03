@@ -344,8 +344,10 @@ function App() {
           </div>
 
           <div className="footer-col info-col">
-            <h3>Contacto Directo</h3>
-            <p>📞 +54 9 351 3019161</p>
+            <h3>Comunícate con nosotros</h3>
+            <p>
+              📞 <a href="tel:+5493513019161" className="footer-phone-link">+54 9 351 3019161</a>
+            </p>
             <p>📍 Córdoba Capital y Alrededores</p>
             <p>🕒 Lun a Vie: 9:00 a 17:30 Hs</p>
           </div>

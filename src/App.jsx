@@ -215,6 +215,41 @@ function App() {
           </div>
         </div>
       </section>
+      
+      {/* SECCIÓN: ¿POR QUÉ ELEGIRNOS? */}
+      <section className="why-section">
+        <div className="section-header">
+          <span className="section-tag">¿Por qué elegir FP Pintura?</span>
+          <h2>Orden, prolijidad y compromiso real</h2>
+          <p>Nos encargamos de cada detalle para que renovar tus espacios sea una experiencia sin dolores de cabeza.</p>
+        </div>
+
+        <div className="why-grid">
+          <div className="why-card">
+            <div className="why-icon">🛡️</div>
+            <h3>Protección y limpieza</h3>
+            <p>Cuidamos pisos, muebles y detalles de terminación para que el trabajo quede impecable de principio a fin.</p>
+          </div>
+
+          <div className="why-card">
+            <div className="why-icon">📍</div>
+            <h3>Cobertura local</h3>
+            <p>Atendemos trabajos en toda Córdoba Capital y alrededores, con fuerte presencia en barrios, countries y zonas residenciales.</p>
+          </div>
+
+          <div className="why-card">
+            <div className="why-icon">📋</div>
+            <h3>Presupuesto claro</h3>
+            <p>Cotizaciones detalladas y transparentes. Evaluamos tu proyecto con rapidez para ofrecerte el mejor costo.</p>
+          </div>
+
+          <div className="why-card">
+            <div className="why-icon">⭐</div>
+            <h3>Experiencia comprobada</h3>
+            <p>Amplia trayectoria en pintura interior, exterior, fachadas e impermeabilización de techos y medianeras.</p>
+          </div>
+        </div>
+      </section>
 
       {/* SECCIÓN DE CONTACTO / FORMULARIO DE PRESUPUESTO */}
       <section id="contacto" className="contact-section">

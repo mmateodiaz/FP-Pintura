@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './App.css';
+import { supabase } from './supabaseClient';
 
 function App() {
   const whatsappNumber = "5493513019161";
@@ -12,6 +13,18 @@ function App() {
     servicio: 'Pintura en Hogares y Obras',
     m2: '',
     consulta: ''
+  });
+
+  // Estados para la sección de reseñas (Supabase)
+  const [resenas, setResenas] = useState([]);
+  const [cargandoResenas, setCargandoResenas] = useState(true);
+  const [enviandoResena, setEnviandoResena] = useState(false);
+  const [resenaEnviada, setResenaEnviada] = useState(false);
+  const [nuevaResena, setNuevaResena] = useState({
+    nombre: '',
+    zona: '',
+    estrellas: 5,
+    comentario: ''
   });
 
   const handleInputChange = (e) => {
@@ -31,6 +44,53 @@ function App() {
       `* Consulta: ${formData.consulta || 'Ninguna'}`
     );
     window.open(`https://wa.me/${whatsappNumber}?text=${mensaje}`, '_blank');
+  };
+
+  // Cargar reseñas desde Supabase
+  const obtenerResenas = async () => {
+    setCargandoResenas(true);
+    const { data, error } = await supabase
+      .from('resenas')
+      .select('*')
+      .order('created_at', { ascending: false });
+
+    if (!error && data) {
+      setResenas(data);
+    }
+    setCargandoResenas(false);
+  };
+
+  useEffect(() => {
+    obtenerResenas();
+  }, []);
+
+  // Enviar nueva reseña a Supabase
+  const handleResenaSubmit = async (e) => {
+    e.preventDefault();
+    if (!nuevaResena.nombre.trim() || !nuevaResena.comentario.trim()) return;
+
+    setEnviandoResena(true);
+    const { error } = await supabase
+      .from('resenas')
+      .insert([
+        {
+          nombre: nuevaResena.nombre.trim(),
+          zona: nuevaResena.zona.trim() || 'Córdoba',
+          estrellas: nuevaResena.estrellas,
+          comentario: nuevaResena.comentario.trim()
+        }
+      ]);
+
+    setEnviandoResena(false);
+
+    if (!error) {
+      setNuevaResena({ nombre: '', zona: '', estrellas: 5, comentario: '' });
+      setResenaEnviada(true);
+      obtenerResenas(); // Recarga la lista al instante
+      setTimeout(() => setResenaEnviada(false), 5000);
+    } else {
+      alert('Hubo un error al publicar la reseña. Por favor intentá nuevamente.');
+    }
   };
 
   // Efecto para activar las animaciones de scroll
@@ -71,6 +131,7 @@ function App() {
           <li><a href="#servicios">Servicios</a></li>
           <li><a href="#trabajos">Trabajos</a></li>
           <li><a href="#proceso">Cómo Trabajamos</a></li>
+          <li><a href="#resenas">Reseñas</a></li>
           <li><a href="#contacto">Contacto</a></li>
         </ul>
         <a 
@@ -248,6 +309,107 @@ function App() {
             <h3>Experiencia comprobada</h3>
             <p>Amplia trayectoria en pintura interior, exterior, fachadas e impermeabilización de techos y medianeras.</p>
           </div>
+        </div>
+      </section>
+
+      {/* SECCIÓN: RESEÑAS DE CLIENTES (CONECTADA A SUPABASE) */}
+      <section id="resenas" className="reviews-section">
+        <div className="section-header">
+          <span className="section-tag">Testimonios</span>
+          <h2>Lo que dicen nuestros clientes</h2>
+          <p>La satisfacción de quienes ya confiaron en nuestro equipo para renovar sus espacios.</p>
+        </div>
+
+        {/* Grilla de reseñas cargadas */}
+        {cargandoResenas ? (
+          <p className="reviews-status">Cargando opiniones de clientes...</p>
+        ) : resenas.length === 0 ? (
+          <p className="reviews-status">Todavía no hay reseñas publicadas. ¡Sé el primero en dejar tu opinión!</p>
+        ) : (
+          <div className="reviews-grid">
+            {resenas.map((item) => (
+              <div key={item.id} className="review-card">
+                <div className="review-stars">
+                  {'★'.repeat(item.estrellas)}
+                  <span className="review-stars-empty">{'★'.repeat(5 - item.estrellas)}</span>
+                </div>
+                <p className="review-comment">"{item.comentario}"</p>
+                <div className="review-author">
+                  <strong>{item.nombre}</strong>
+                  {item.zona && <span>📍 {item.zona}</span>}
+                </div>
+              </div>
+            ))}
+          </div>
+        )}
+
+        {/* Formulario para que el cliente deje su reseña */}
+        <div className="review-form-wrapper">
+          <h3>¿Trabajamos en tu propiedad? Dejanos tu opinión</h3>
+          <p>Tu comentario ayuda a otros vecinos de Córdoba a conocernos.</p>
+
+          {resenaEnviada && (
+            <div className="review-success-banner">
+              ✅ ¡Muchas gracias! Tu reseña ya se publicó en la página.
+            </div>
+          )}
+
+          <form onSubmit={handleResenaSubmit} className="review-form">
+            <div className="review-form-row">
+              <div className="form-group">
+                <label>Tu Nombre *</label>
+                <input
+                  type="text"
+                  required
+                  placeholder="Ej: Martín Gómez"
+                  value={nuevaResena.nombre}
+                  onChange={(e) => setNuevaResena({ ...nuevaResena, nombre: e.target.value })}
+                />
+              </div>
+
+              <div className="form-group">
+                <label>Barrio / Zona (Opcional)</label>
+                <input
+                  type="text"
+                  placeholder="Ej: Cerro de las Rosas"
+                  value={nuevaResena.zona}
+                  onChange={(e) => setNuevaResena({ ...nuevaResena, zona: e.target.value })}
+                />
+              </div>
+            </div>
+
+            <div className="form-group">
+              <label>Calificación</label>
+              <div className="star-selector">
+                {[1, 2, 3, 4, 5].map((num) => (
+                  <button
+                    type="button"
+                    key={num}
+                    className={`star-btn ${num <= nuevaResena.estrellas ? 'active' : ''}`}
+                    onClick={() => setNuevaResena({ ...nuevaResena, estrellas: num })}
+                    aria-label={`${num} estrellas`}
+                  >
+                    ★
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            <div className="form-group">
+              <label>Tu Experiencia *</label>
+              <textarea
+                rows="3"
+                required
+                placeholder="Contanos cómo quedó el trabajo, la prolijidad y el trato del equipo..."
+                value={nuevaResena.comentario}
+                onChange={(e) => setNuevaResena({ ...nuevaResena, comentario: e.target.value })}
+              ></textarea>
+            </div>
+
+            <button type="submit" className="btn-submit-review" disabled={enviandoResena}>
+              {enviandoResena ? 'Publicando...' : 'Publicar Reseña'}
+            </button>
+          </form>
         </div>
       </section>
 

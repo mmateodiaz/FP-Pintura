@@ -1127,6 +1127,10 @@ footer.footer {
   gap: 1.5rem;
 }
 
+.team-card {
+  cursor: pointer;
+}
+
 /* Las 2 primeras fotos grupales arriba */
 .team-card-featured {
   grid-column: span 3;
@@ -1136,16 +1140,19 @@ footer.footer {
   height: 440px;
 }
 
-/* La primera foto es horizontal (4 personas), se centra normal */
+/* Primera foto horizontal (4 personas) */
 .team-card-featured:first-child .gallery-img {
   object-fit: cover;
   object-position: center center;
 }
 
-/* La segunda foto (Capacitación) es vertical: mostramos desde arriba sin cortar */
+/* Segunda foto vertical (Capacitación) entera sin recortar */
+.team-card-featured:nth-child(2) .team-image-container {
+  background-color: #0f172a;
+}
+
 .team-card-featured:nth-child(2) .gallery-img {
-  object-fit: cover;
-  object-position: center 15%;
+  object-fit: contain;
 }
 
 /* Las 3 fotos verticales de abajo */
@@ -1160,4 +1167,90 @@ footer.footer {
 .team-card:not(.team-card-featured) .gallery-img {
   object-fit: cover;
   object-position: center center;
+}
+
+/* Lightbox / Visor en tamaño completo al hacer clic */
+.team-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: rgba(15, 23, 42, 0.88);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+.team-lightbox-content {
+  position: relative;
+  max-width: 750px;
+  width: 100%;
+  background: #0f172a;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+.team-lightbox-content img {
+  width: 100%;
+  max-height: 75vh;
+  object-fit: contain;
+  background: #000;
+  display: block;
+}
+
+.team-lightbox-caption {
+  padding: 1.25rem 1.5rem;
+  color: #fff;
+}
+
+.team-lightbox-caption h3 {
+  margin: 0 0 0.35rem;
+  font-size: 1.15rem;
+}
+
+.team-lightbox-caption p {
+  margin: 0;
+  color: #cbd5e1;
+  font-size: 0.95rem;
+}
+
+.team-lightbox-close {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(15, 23, 42, 0.85);
+  color: #fff;
+  font-size: 1.15rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.team-lightbox-close:hover {
+  background: #1e293b;
+  transform: scale(1.08);
+}
+
+@media (max-width: 900px) {
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .team-card,
+  .team-card-featured {
+    grid-column: span 1;
+  }
+}
+
+@media (max-width: 600px) {
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
 }

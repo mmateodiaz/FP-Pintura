@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './App.css';
 import { supabase } from './supabaseClient';
+import Equipo from './components/Equipo';
 
 function App() {
   const whatsappNumber = "5493513019161";
@@ -119,6 +120,15 @@ function App() {
       cards.forEach(card => observer.unobserve(card));
     };
   }, []);
+
+<ul className="nav-links">
+  <li><a href="#servicios">Servicios</a></li>
+  <li><a href="#trabajos">Trabajos</a></li>
+  <li><a href="#proceso">Cómo Trabajamos</a></li>
+  <li><a href="#equipo">Equipo</a></li>
+  <li><a href="#resenas">Reseñas</a></li>
+  <li><a href="#contacto">Contacto</a></li>
+</ul>
 
   return (
     <div>
@@ -276,6 +286,7 @@ function App() {
           </div>
         </div>
       </section>
+
       
       {/* SECCIÓN: ¿POR QUÉ ELEGIRNOS? */}
       <section className="why-section">
@@ -311,6 +322,10 @@ function App() {
           </div>
         </div>
       </section>
+      
+      <Equipo />
+
+
 
       {/* SECCIÓN: RESEÑAS DE CLIENTES (CONECTADA A SUPABASE) */}
       <section id="resenas" className="reviews-section">

@@ -57,7 +57,7 @@ const categoriasTrabajos = [
       },
     ],
   },
-  {
+ {
     id: 'impermeabilizacion',
     titulo: 'Impermeabilización',
     descripcion: 'Protección y sellado profesional de techos, muros y medianeras.',
@@ -67,7 +67,22 @@ const categoriasTrabajos = [
         src: '/impermeabilizacion.png',
         subtitulo: 'Impermeabilización de muros, medianeras y cubiertas contra filtraciones.',
       },
-      // Acá vamos a sumar las próximas fotos de impermeabilización
+      {
+        src: '/Impermeabilizacion1.jpg',
+        subtitulo: 'Retiro completo de membrana vieja deteriorada para preparar la base.',
+      },
+      {
+        src: '/Impermeabilizacion3.jpg',
+        subtitulo: 'Hidrolavado a presión de la losa para eliminar hongos, polvo y material suelto.',
+      },
+      {
+        src: '/Impermeabilizacion2.jpg',
+        subtitulo: 'Aplicación de membrana líquida elastomérica y refuerzo en juntas de cubierta.',
+      },
+      {
+        src: '/Impermeabilizacion4.jpg',
+        subtitulo: 'Sellado con venda geotextil en babetas y encuentros con cargas perimetrales.',
+      },
     ],
   },
   {

@@ -39,7 +39,22 @@ const categoriasTrabajos = [
         src: '/interior.png',
         subtitulo: 'Renovación completa de ambientes interiores con terminación impecable.',
       },
-      // Acá vamos a sumar las próximas fotos de interiores
+      {
+        src: '/Interior1.jpg',
+        subtitulo: 'Aplicación con rodillo en nichos, estantes y paredes con terminación uniforme.',
+      },
+      {
+        src: '/Interior2.jpg',
+        subtitulo: 'Terminaciones detalladas junto a aberturas y ventanales interiores.',
+      },
+      {
+        src: '/Interior3.jpg',
+        subtitulo: 'Trabajo en equipo y organización en ambientes amplios y luminosos.',
+      },
+      {
+        src: '/Interior4.jpg',
+        subtitulo: 'Aplicación de pintura gris en paredes y cielorrasos con cobertura pareja.',
+      },
     ],
   },
   {

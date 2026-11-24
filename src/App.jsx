@@ -423,7 +423,7 @@ function App() {
             
             <div className="contact-details-box">
               <p>📍 Córdoba Capital y Localidades Cercanas</p>
-              <p>🕒 Lunes a Viernes de 9:00 a 17:30 Hs</p>
+              <p>🕒 Lunes a Viernes de 8:00 a 18:00 Hs</p>
             </div>
           </div>
 
@@ -545,7 +545,7 @@ function App() {
               📞 <a href="tel:+5493513019161" className="footer-phone-link">+54 9 351 3019161</a>
             </p>
             <p>📍 Córdoba Capital y Alrededores</p>
-            <p>🕒 Lun a Vie: 9:00 a 17:30 Hs</p>
+            <p>🕒 Lun a Vie: 8:00 a 18:00 Hs</p>
           </div>
         </div>
 

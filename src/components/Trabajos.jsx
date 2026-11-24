@@ -87,15 +87,30 @@ const categoriasTrabajos = [
   },
   {
     id: 'tejas',
-    titulo: 'Limpieza y Mantenimiento de Tejas',
-    descripcion: 'Recuperación de cubiertas, techos y superficies exteriores.',
+    titulo: 'Limpieza y Mantenimiento de Tejas y Maderas',
+    descripcion: 'Recuperación de cubiertas, tejas, aberturas y superficies de madera.',
     portada: '/limpiezatejas.png',
     fotos: [
       {
         src: '/limpiezatejas.png',
         subtitulo: 'Limpieza profunda, hidrolavado y protección de techos de tejas.',
       },
-      // Acá vamos a sumar las próximas fotos de tejas
+      {
+        src: '/Madera2.jpg',
+        subtitulo: 'Preparación, lijado y restauración de pisos y estructuras de madera.',
+      },
+      {
+        src: '/Madera3.jpg',
+        subtitulo: 'Aplicación de protector y lasur en puertas de madera con piso protegido.',
+      },
+      {
+        src: '/Madera4.jpg',
+        subtitulo: 'Tratamiento y detalles en celosías y postigos exteriores.',
+      },
+      {
+        src: '/Madera1.jpg',
+        subtitulo: 'Terminación final con veta realzada y protección duradera en aberturas.',
+      },
     ],
   },
 ];

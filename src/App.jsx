@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './App.css';
 import { supabase } from './supabaseClient';
 import Equipo from './components/Equipo';
+import Trabajos from './components/Trabajos';
 
 function App() {
   const whatsappNumber = "5493513019161";
@@ -209,55 +210,7 @@ function App() {
         </div>
       </section>
 
-      <section id="trabajos" className="gallery-section">
-        <div className="section-header" style={{ marginBottom: '3rem' }}>
-          <span className="section-tag">Galería</span>
-          <h2>Trabajos Realizados</h2>
-          <p>Un recorrido visual por las obras y acabados que realizamos para nuestros clientes.</p>
-        </div>
-
-        <div className="gallery-grid">
-          <div className="gallery-card">
-            <div className="gallery-image-container">
-              <img src="/casa.png" alt="Pintura de Casas y Obras" className="gallery-img" />
-            </div>
-            <div className="gallery-info">
-              <h3>Pintura de Casas y Obras</h3>
-              <p>Terminaciones exteriores e interiores en proyectos residenciales.</p>
-            </div>
-          </div>
-
-          <div className="gallery-card">
-            <div className="gallery-image-container">
-              <img src="/interior.png" alt="Pintura de Interiores" className="gallery-img" />
-            </div>
-            <div className="gallery-info">
-              <h3>Renovación de Interiores</h3>
-              <p>Prolijidad absoluta y cuidado de los espacios en cada ambiente.</p>
-            </div>
-          </div>
-
-          <div className="gallery-card">
-            <div className="gallery-image-container">
-              <img src="/impermeabilizacion.png" alt="Impermeabilización" className="gallery-img" />
-            </div>
-            <div className="gallery-info">
-              <h3>Impermeabilización</h3>
-              <p>Protección y sellado profesional de techos, muros y medianeras.</p>
-            </div>
-          </div>
-
-          <div className="gallery-card">
-            <div className="gallery-image-container">
-              <img src="/limpiezatejas.png" alt="Limpieza y Mantenimiento de Tejas" className="gallery-img" />
-            </div>
-            <div className="gallery-info">
-              <h3>Limpieza y Mantenimiento de Tejas</h3>
-              <p>Recuperación de cubiertas, techos y superficies exteriores.</p>
-            </div>
-          </div>
-        </div>
-      </section>
+      <Trabajos />
 
       <section id="proceso" className="steps-section">
         <div className="section-header" style={{ marginBottom: '3rem' }}>
